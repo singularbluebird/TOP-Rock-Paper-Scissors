@@ -1,3 +1,5 @@
+// output variable is created outside of function because we'll access it later
+// to determine the winner.
 let output; 
 
 // Randomly returns Rock, Paper, or Scissors
