@@ -1,6 +1,8 @@
+let output; 
+
 // Randomly returns Rock, Paper, or Scissors
 function computerPlay() {
-    let output = Math.floor(Math.random() * 3); 
+    output = Math.floor(Math.random() * 3); 
     let decision;
 
     switch (output) {
