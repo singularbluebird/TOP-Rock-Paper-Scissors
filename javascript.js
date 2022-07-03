@@ -5,7 +5,7 @@ let output;
 // These variables will be numbers associated with the player's selection 
 // and similarly for the computer, they'll be used to determine who wins.
 let computerChoice;
-let playerChoice
+let playerChoice;
 
 // Randomly returns Rock, Paper, or Scissors
 function computerPlay() {
