@@ -9,8 +9,10 @@ function computerPlay() {
             break;
         case 1:
             decision = "Paper";
+            break;
         case 2:
             decision = "Scissors";
+            break;
         default:
             return "Oops, something went wrong!";
     }
