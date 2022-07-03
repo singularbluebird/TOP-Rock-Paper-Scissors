@@ -24,6 +24,8 @@ function computerPlay() {
     return decision;
 }
 
+// Take inputs from the computer and the player and then determine who wins,
+// displaying message at the end.
 function gameRound(playerSelection, computerSelection) {
 
     let outcome;
