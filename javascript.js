@@ -23,3 +23,25 @@ function computerPlay() {
 
     return decision;
 }
+
+function gameRound(playerSelection, computerSelection) {
+
+    let outcome;
+    let winner;
+    let looser;
+
+    if (playerSelection - computerSelection === 0) {
+        return "It's a tie!";
+    }
+    else if (playerSelection - computerSelection > 0) {
+        outcome = "Win";
+        winner = playerSelection;
+    }
+    else {
+        outcome = "Lose";
+        looser = computerSelection;
+    }
+
+    return `You ${outcome}! ${winner} beats ${looser}`;
+
+}
