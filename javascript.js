@@ -45,9 +45,13 @@ function gameRound(playerSelection, computerSelection) {
 
 // Takes word input of any kind and turns it into a number that can then be
 // associated with the array of choices for the game.
-function playerPlay(wordChoice) {
+function playerPlay() {
 
-    let choice = wordChoice.charAt(0).toUpperCase() + wordChoice.slice(1).toLowerCase();
+    let choice = "";
+
+    choice = prompt("Rock, paper, scissors!");
+
+    choice = choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
 
     let numChoice;
 
