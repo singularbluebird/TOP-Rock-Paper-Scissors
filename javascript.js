@@ -65,6 +65,29 @@ function playerPlay(wordChoice) {
     return numChoice;
 }
 
+// I need a modulo function that returned the modulo class and not the remainder
+// (the positive remainder).
+function modulo(number, moded) {
+
+    if (number%moded === 0) {
+        return 0;
+    }
+
+    let difference = 0;
+
+    while (number%moded !== 0) {
+
+        difference++;
+        number += difference;
+
+    }
+
+    result = moded - difference;
+
+    return result;
+
+}
+
 /** Your issue right now is that you want to have an array with all choices in the 
  * game, and then determine who the winner is by determining who has the greater
  * position in the array. YOu also need to be able to switch between the array and
