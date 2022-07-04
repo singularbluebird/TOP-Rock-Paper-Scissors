@@ -2,6 +2,8 @@
 // to determine the winner.
 let output; 
 
+const choices = ["Rock", "Scissors", "Paper"];
+
 // These variables will be numbers associated with the player's selection 
 // and similarly for the computer, they'll be used to determine who wins.
 let computerChoice;
