@@ -9,12 +9,12 @@ const choices = ["Rock", "Scissors", "Paper"];
 let computerChoice;
 let playerChoice;
 
-// Randomly returns Rock, Paper, or Scissors
+// Randomly returns Rock, Paper, or Scissors in the form of a number between 0
+// and 2 inclusive
 function computerPlay() {
     output = Math.floor(Math.random() * 3); 
-    let decision = choices[output];
 
-    return decision;
+    return output;
 }
 
 // Take inputs from the computer and the player and then determine who wins,
