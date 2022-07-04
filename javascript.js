@@ -41,6 +41,28 @@ function gameRound(playerSelection, computerSelection) {
 
 }
 
+// Takes word input of any kind and turns it into a number that can then be
+// associated with the array of choices for the game.
+function playerPlay(wordChoice) {
+
+    let choice = wordChoice.charAt(0).toUpperCase() + wordChoice.slice(1);
+
+    let numChoice;
+
+    for(let counter = 0; counter < 3; counter++) {
+        
+        if (choice === choices[counter]) {
+            numChoice = choices[counter];
+        }
+        else if (counter === 2 || choice !== choices[2]) {
+            return "Oops, something went wrong!";
+        }
+
+    }
+
+    return numChoice;
+}
+
 /** Your issue right now is that you want to have an array with all choices in the 
  * game, and then determine who the winner is by determining who has the greater
  * position in the array. YOu also need to be able to switch between the array and
