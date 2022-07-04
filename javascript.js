@@ -30,11 +30,13 @@ function gameRound(playerSelection, computerSelection) {
     }
     else if (playerSelection - computerSelection > 0) {
         outcome = "Win";
-        winner = playerSelection;
+        winner = choices[playerSelection];
+        looser = choices[computerSelection]
     }
     else {
         outcome = "Lose";
-        looser = computerSelection;
+        looser = choices[computerSelection];
+        winner = choices[playerSelection];
     }
 
     return `You ${outcome}! ${winner} beats ${looser}`;
