@@ -54,7 +54,7 @@ function playerPlay(wordChoice) {
         if (choice === choices[counter]) {
             numChoice = counter;
         }
-        else if (numChoice === undefined) {
+        else if (numChoice === undefined && counter === 2) {
             return "Oops, something went wrong!";
         }
 
