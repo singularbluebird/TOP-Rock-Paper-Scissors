@@ -88,3 +88,37 @@ function modulo(number, moded) {
 
 }
 
+
+// Plays game for 5 rounds and keeps score.
+function game() {
+
+    let computerScore = 0;
+    let playerScore = 0;
+    let result;
+
+    for (let i = 0; i < 5; i++) {
+
+        round = gameRound(computerPlay(), computerPlay())
+
+        if (round.charAt(4) === "W") {
+            playerScore++;
+        }
+        else if (round.charAt(4) === "L") {
+            computerScore++;
+        }
+
+    }
+
+    if (computerScore < playerScore) {
+        result = "You Win!";
+    }
+    else if (computerScore > playerScore) {
+        result = "You Loose!"
+    }
+    else {
+        result = "It's a tie."
+    }
+
+    return `Your score is ${playerScore} / 5, and the computer's score is ${computerScore} / 5. ${result}`;
+
+}
