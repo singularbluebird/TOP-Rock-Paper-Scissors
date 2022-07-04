@@ -102,7 +102,7 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
 
-        round = gameRound(computerPlay(), computerPlay())
+        round = gameRound(playerPlay(), computerPlay())
 
         console.log(round);
 
