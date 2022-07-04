@@ -100,6 +100,8 @@ function game() {
 
         round = gameRound(computerPlay(), computerPlay())
 
+        console.log(round);
+
         if (round.charAt(4) === "W") {
             playerScore++;
         }
@@ -107,6 +109,7 @@ function game() {
             computerScore++;
         }
 
+        console.log(`Your score: ${playerScore}, Computer's score: ${computerScore}`);
     }
 
     if (computerScore < playerScore) {
