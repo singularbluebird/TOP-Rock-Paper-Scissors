@@ -34,7 +34,7 @@ If the array is set in the order of rock, scissors, and then paper then the posi
 of each choice in the array compared to the position of the choice from the computer
 can be used to determine the winner. 
 
-We start by enumerating rock as 0, scissors as 1, and paper as 2 and with 2. Then,
+We start by enumerating rock as 0, scissors as 1, and paper as 2. Then,
 we give the first number to the player and the second to the computer. The player wins
 if and only if the computer's choice minus the player's is -1. For the case where
 the player chooses paper, and the computer rock (in which case the player should win),
