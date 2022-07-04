@@ -35,8 +35,8 @@ function gameRound(playerSelection, computerSelection) {
     }
     else {
         outcome = "Lose";
-        looser = choices[computerSelection];
-        winner = choices[playerSelection];
+        looser = choices[playerSelection];
+        winner = choices[computerSelection];
     }
 
     return `You ${outcome}! ${winner} beats ${looser}`;
