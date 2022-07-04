@@ -88,10 +88,3 @@ function modulo(number, moded) {
 
 }
 
-/** Your issue right now is that you want to have an array with all choices in the 
- * game, and then determine who the winner is by determining who has the greater
- * position in the array. YOu also need to be able to switch between the array and
- * the actual choice made in the game to both determine the winner and output a 
- * string to let the player know who won. You'll have to research arrays in 
- * javascript in order to see if you can achieve this.
- */
