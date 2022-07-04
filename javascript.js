@@ -28,7 +28,7 @@ function gameRound(playerSelection, computerSelection) {
     if (playerSelection - computerSelection === 0) {
         return "It's a tie!";
     }
-    else if (((playerSelection + 1) % 3) - (computerSelection + 1) % 3 === - 1) {
+    else if (((playerSelection + 1) % 3) - (computerSelection + 1) % 3 === -1) {
         outcome = "Win";
         winner = choices[playerSelection];
         looser = choices[computerSelection]
