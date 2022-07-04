@@ -45,16 +45,16 @@ function gameRound(playerSelection, computerSelection) {
 // associated with the array of choices for the game.
 function playerPlay(wordChoice) {
 
-    let choice = wordChoice.charAt(0).toUpperCase() + wordChoice.slice(1);
+    let choice = wordChoice.charAt(0).toUpperCase() + wordChoice.slice(1).toLowerCase();
 
     let numChoice;
 
     for(let counter = 0; counter < 3; counter++) {
         
         if (choice === choices[counter]) {
-            numChoice = choices[counter];
+            numChoice = counter;
         }
-        else if (counter === 2 || choice !== choices[2]) {
+        else if (numChoice === undefined) {
             return "Oops, something went wrong!";
         }
 
