@@ -1,5 +1,6 @@
 const choices = ["Rock", "Scissors", "Paper"];
 
+const results = document.querySelector(".results");
 
 // Randomly returns Rock, Paper, or Scissors in the form of a number between 0
 // and 2 inclusive
@@ -19,7 +20,7 @@ function gameRound(playerSelection, computerSelection) {
 
     if (playerSelection - computerSelection === 0) {
         // return "It's a tie!";
-        alert("It's a tie!");
+        results.textContent = "It's a tie!";
         return;
     }
     else if (modulo(playerSelection - computerSelection, 3) === 2) {
@@ -34,8 +35,7 @@ function gameRound(playerSelection, computerSelection) {
     }
 
     // return `You ${outcome}! ${winner} beats ${looser}`;
-    alert(`You ${outcome}! ${winner} beats ${looser}`);
-
+    results.textContent = `You ${outcome}! ${winner} beats ${looser}`;
 }
 
 // Takes word input of any kind and turns it into a number that can then be
@@ -94,6 +94,7 @@ const scissors = document.querySelector(".scissors");
 rock.addEventListener("click", () => gameRound(0, computerPlay()));
 paper.addEventListener("click", () => gameRound(2, computerPlay()));
 scissors.addEventListener("click", () => gameRound(1, computerPlay()));
+
 
 // Plays game for 5 rounds and keeps score.
 /*function game() {
