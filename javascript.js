@@ -94,7 +94,7 @@ function modulo(number, moded) {
 
 
 // Plays game for 5 rounds and keeps score.
-function game() {
+/*function game() {
 
     let computerScore = 0;
     let playerScore = 0;
@@ -128,4 +128,4 @@ function game() {
 
     return `Your score is ${playerScore} / 5, and the computer's score is ${computerScore} / 5. ${result}`;
 
-}
+}*/
