@@ -1,13 +1,5 @@
-// output variable is created outside of function because we'll access it later
-// to determine the winner.
-let output; 
-
 const choices = ["Rock", "Scissors", "Paper"];
 
-// These variables will be numbers associated with the player's selection 
-// and similarly for the computer, they'll be used to determine who wins.
-let computerChoice;
-let playerChoice;
 
 // Randomly returns Rock, Paper, or Scissors in the form of a number between 0
 // and 2 inclusive
@@ -26,12 +18,14 @@ function gameRound(playerSelection, computerSelection) {
     let looser;
 
     if (playerSelection - computerSelection === 0) {
-        return "It's a tie!";
+        // return "It's a tie!";
+        alert("It's a tie!");
+        return;
     }
     else if (modulo(playerSelection - computerSelection, 3) === 2) {
         outcome = "Win";
         winner = choices[playerSelection];
-        looser = choices[computerSelection]
+        looser = choices[computerSelection];
     }
     else {
         outcome = "Lose";
@@ -39,7 +33,8 @@ function gameRound(playerSelection, computerSelection) {
         winner = choices[computerSelection];
     }
 
-    return `You ${outcome}! ${winner} beats ${looser}`;
+    // return `You ${outcome}! ${winner} beats ${looser}`;
+    alert(`You ${outcome}! ${winner} beats ${looser}`);
 
 }
 
@@ -96,10 +91,9 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 
-rock.addEventListener("click", gameRound(0, computerPlay));
-paper.addEventListener("click", gameRound(2, computerPlay));
-scissors.addEventListener("click", gameRound(1, computerPlay));
-
+rock.addEventListener("click", () => gameRound(0, computerPlay()));
+paper.addEventListener("click", () => gameRound(2, computerPlay()));
+scissors.addEventListener("click", () => gameRound(1, computerPlay()));
 
 // Plays game for 5 rounds and keeps score.
 /*function game() {
