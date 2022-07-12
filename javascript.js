@@ -92,6 +92,14 @@ function modulo(number, moded) {
 
 }
 
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+
+rock.addEventListener("click", gameRound(0, computerPlay));
+paper.addEventListener("click", gameRound(2, computerPlay));
+scissors.addEventListener("click", gameRound(1, computerPlay));
+
 
 // Plays game for 5 rounds and keeps score.
 /*function game() {
