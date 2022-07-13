@@ -2,6 +2,9 @@ const choices = ["Rock", "Scissors", "Paper"];
 
 const results = document.querySelector(".results");
 
+let computerScore = 0;
+let playerScore = 0;
+
 // Randomly returns Rock, Paper, or Scissors in the form of a number between 0
 // and 2 inclusive
 function computerPlay() {
@@ -18,6 +21,9 @@ function gameRound(playerSelection, computerSelection) {
     let winner;
     let looser;
 
+    let ultimateWinner;
+    let ultimateLoser;
+
     if (playerSelection - computerSelection === 0) {
         // return "It's a tie!";
         results.textContent = "It's a tie!";
@@ -27,15 +33,28 @@ function gameRound(playerSelection, computerSelection) {
         outcome = "Win";
         winner = choices[playerSelection];
         looser = choices[computerSelection];
+        playerScore++;
     }
     else {
         outcome = "Lose";
         looser = choices[playerSelection];
         winner = choices[computerSelection];
+        computerScore++;
     }
 
+    if (computerScore === 5 || playerScore === 5) {
+        ultimateWinner = (playerScore === 5) ? "You" : "The computer";
+        ultimateLoser = (ultimateWinner === "You") ? "The computer" : "You";
+
+        let loserScore = (ultimateWinner === "You") ? computerScore : playerScore;
+
+        results.textContent = `The winner is : ${ultimateWinner} with a score of 5, ${ultimateLoser} scored ${loserScore}. Game Over!`;
+        computerScore = 0;
+        playerScore = 0;
+        return;
+    }
     // return `You ${outcome}! ${winner} beats ${looser}`;
-    results.textContent = `You ${outcome}! ${winner} beats ${looser}`;
+    results.textContent = `You ${outcome}! ${winner} beats ${looser}. Your score is ${playerScore}, and the computer's is ${computerScore}.`;
 }
 
 // Takes word input of any kind and turns it into a number that can then be
@@ -94,7 +113,6 @@ const scissors = document.querySelector(".scissors");
 rock.addEventListener("click", () => gameRound(0, computerPlay()));
 paper.addEventListener("click", () => gameRound(2, computerPlay()));
 scissors.addEventListener("click", () => gameRound(1, computerPlay()));
-
 
 // Plays game for 5 rounds and keeps score.
 /*function game() {
