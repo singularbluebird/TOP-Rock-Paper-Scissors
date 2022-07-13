@@ -26,7 +26,7 @@ function gameRound(playerSelection, computerSelection) {
 
     if (playerSelection - computerSelection === 0) {
         // return "It's a tie!";
-        results.textContent = "It's a tie!";
+        results.textContent = `It's a tie! Your score: ${playerScore}, computer's score: ${computerScore}`;
         return;
     }
     else if (modulo(playerSelection - computerSelection, 3) === 2) {
